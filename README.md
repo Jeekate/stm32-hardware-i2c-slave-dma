@@ -8,9 +8,9 @@
 `void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)`
 当接受/发送数据时收到STOP/NACK信号时被调用，可以认为此时主机以及写入/读取足够字节，本次传输结束
 
-工程中有4个逻辑分析仪文件，有linux下i2c-tool工具命令结果，另一个单片机当作主机读写从机的I2C波形图
-
 `void HAL_I2C_ListenCpltCallback(I2C_HandleTypeDef *hi2c)`
+
+工程中有4个逻辑分析仪文件，有linux下i2c-tool工具命令结果，另一个单片机当作主机读写从机的I2C波形图
 当检测到总线上有本机地址时调用，判断数据方向后调用相关API
 注意此时 _**I2C_LAST_FRAME**_ 参数，该参数导致无法进入I2C_DMASlaveReceiveCplt（初始化监听时注册）
 
