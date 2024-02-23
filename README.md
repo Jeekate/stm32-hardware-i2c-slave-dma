@@ -5,10 +5,13 @@
 
 #### 软件架构
 主要基于两个回调函数：
+
 `void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)`
+
 当接受/发送数据时收到STOP/NACK信号时被调用，可以认为此时主机以及写入/读取足够字节，本次传输结束
 
 `void HAL_I2C_ListenCpltCallback(I2C_HandleTypeDef *hi2c)`
+
 当主机发数据不满DMA计数时，进入这个回调函数，需要我们字节计算收到的字节数。并开启下一轮通信。 
 
 
