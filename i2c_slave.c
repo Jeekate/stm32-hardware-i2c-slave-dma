@@ -2,8 +2,6 @@
 #include <string.h>
 #include "i2c_slave.h"
 #include "i2c.h"
-//#include "sensor.h"
-//#include "key.h"
 
 typedef struct SLAVE_GVAR_ST{
 	uint8_t addr;
